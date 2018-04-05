@@ -1,0 +1,14 @@
+body {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 100%;
+	background-image: url(/assets/image/banner.jpg);
+	
+	
+	height: 640px;
+	text-align: center;
+}
+h2{
+    margin-left: 50px;
+    color: aliceblue;
+    margin-top: -630px;
+}

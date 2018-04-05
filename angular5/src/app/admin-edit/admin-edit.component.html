@@ -1,0 +1,65 @@
+<app-nav-bar></app-nav-bar>
+<body>
+<div class="container">
+    <h2>Admin Update </h2>
+    <br>
+    <h2 class="page-header" style="text-align: center">{{ title }}</h2>
+    <div class="col-lg-3"></div>
+    <form (submit) = "updateAdmin(editAdmin,editid)" class="form-horizontal col-lg-6">
+        <fieldset>
+      <div class="form-group">
+        <label for="inputName" class="col-lg-2 control-label">Name</label>
+        <div class="col-lg-10">
+          <input type="text" [(ngModel)] = "editname" id="inputName"  name="name"  class="form-control">
+        </div>
+      </div>
+      <div class="form-group">
+          <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+          <div class="col-lg-10">
+            <input type="text" [(ngModel)] = "editemail" id="inputEmail" name="email"  class="form-control">
+          </div>
+      </div>
+      <div class="form-group">
+          <label for="inputMobile" class="col-lg-2 control-label">Mobile</label>
+          <div class="col-lg-10">
+            <input type="text" [(ngModel)] = "editmobile" id="inputMobile"  name="mobile"  class="form-control">
+      </div>
+      <div class="form-group">
+        <label class="col-lg-2 control-label">Gender</label>
+        <div class="col-lg-10">
+          <div class="r-btn">
+            <input  [(ngModel)]="editgender" value="male" type="radio" [ngModelOptions]="{standalone: true}">male
+            <input  [(ngModel)]="editgender" value="female" type="radio" [ngModelOptions]="{standalone: true}">female
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="form-group">
+        <label for="inputAddress" class="col-lg-2 control-label">Address</label>
+        <div class="col-lg-10">
+          <input type="text" [(ngModel)] = "editaddress" id="inputAddress"  name="address"  class="form-control">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputUsername" class="col-lg-2 control-label">UserName</label>
+        <div class="col-lg-10">
+          <input type="text" [(ngModel)] = "editusername" id="inputUsername"  name="username"  class="form-control">
+        </div>
+      </div>
+      <br>
+      <div class="form-group">
+          <div class="col-lg-10 col-lg-offset-2">
+              <div class="btns">
+              <input type="submit"class="btn btn-primary" value="Update">
+              <a [routerLink]="['/addmindisplay']" routerLinkActive="active">
+                <input type="button" value="Cancel" class="btn">
+              </a>
+              </div>
+          </div>
+        </div>
+      
+      </fieldset>
+    </form>
+    <div class="col-lg-3"></div>
+  </div>
+</body>

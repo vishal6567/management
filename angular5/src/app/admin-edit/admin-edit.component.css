@@ -1,0 +1,45 @@
+.container
+{
+   
+    margin-left:450px;
+    width:400px;
+    box-shadow:8px 10px 10px 10px black;
+   
+   
+}
+h2
+{
+    margin-left: 40px;
+}
+body{
+    background:gray;
+}
+.form-control
+{
+   
+    width:300px;
+   
+}
+.form-group
+{
+    float: left;
+    
+}
+.btns
+{
+    width:250px;
+    height:45px;
+    margin-left: 20px;
+   
+}
+.r-btn
+{
+    width:200px;
+    height:30px;
+    
+}
+.btn
+{
+    float: left;
+    margin-left:35px;
+}

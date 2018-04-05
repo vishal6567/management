@@ -1,0 +1,94 @@
+<!--
+<div class="container">
+    <br>
+    <h2 class="page-header" style="text-align: center">Employee List</h2><br>
+    <div class="col-md-12">
+      <div class="col-md-3 employee_list_heading">
+          <label>Name</label>
+        </div>
+        <div class="col-md-3 employee_list_heading">
+            <label>Age</label>
+        </div>
+        <div class="col-md-3 employee_list_heading">
+            <label>Email</label>
+        </div>
+        <div class="col-md-3 employee_list_heading">
+            <label>UserName</label>
+        </div>
+        <div class="col-md-3 employee_list_heading">
+            <label>Password</label>
+        </div>
+        <div class="col-md-3 employee_list_heading">
+            <label>Action</label>
+            <br><br>
+        </div>
+  
+  </div>
+<div *ngFor = "let employee of employees">
+
+  <div class="col-md-12">
+      
+      <div class="col-md-3" style="float: left">
+        {{employee.id}}
+      </div>
+      <div class="col-md-3" style="float: left">
+          {{employee.name}}
+      </div>
+      <div class="col-md-3" style="float: left">
+        {{employee.age}}
+      </div>
+      <div class="col-md-3" style="float: left">
+        {{employee.email}}
+      </div>
+      <div class="col-md-3" style="float: left">
+          {{employee.username}}
+      </div>
+      <div class="col-md-3" style="float: left">
+          {{employee.password}}
+      </div>
+      
+      <div class="col-md-3" style="float: left">
+        <a [routerLink]="['/display', employee.id]" routerLinkActive="active">
+            <input type="button" value="Edit" class="btn btn-success">
+          </a>
+          <input type="button" (click) = "deleteEmployee(employee.id)" value="Delete" class="btn btn-danger">
+          <br><br>
+      </div>
+     
+    </div>  
+  
+  </div>!-->
+  <app-nav-bar></app-nav-bar>
+  <body>
+  <table class="table table-sm table-dark">
+    <thead>
+      <h3>Company Detail</h3>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">name</th>
+        <th scope="col">email</th>
+        <th scope="col">phone</th>
+        <th scope="col">address</th>
+        <th scope="col">state</th>
+        <th scope="col">contry</th>
+      </tr>
+    </thead>
+    
+    <tbody *ngFor = "let employee of employees">
+        
+      <tr>
+        <th scope="row">{{employee.cmp_id}}</th>
+        <td>{{employee.cmp_name}}</td>
+        <td>{{employee.email}}</td>
+        <td>{{employee.phone}}</td>
+        <td>{{employee.address}}</td>
+        <td>{{employee.state}}</td>
+        <td>{{employee.country}}</td>
+         <a [routerLink]="['/edit',employee.cmp_id]" routerLinkActive="active" >
+          <input type="button"  value="Edit" class="btn btn-success">
+        </a>
+        <input type="button" (click) = "deleteEmployee(employee.cmp_id)" value="Delete" class="btn btn-danger">
+      </tr>    
+    </tbody>
+  </table>
+</body>

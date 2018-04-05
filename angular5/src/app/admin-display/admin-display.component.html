@@ -1,0 +1,38 @@
+<app-nav-bar></app-nav-bar>
+  <body>
+  <table class="table table-sm table-dark">
+    <thead>
+      <h3>Admin Detail</h3>
+      <tr>
+        <th scope="col">CompanyName</th>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Mobile</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Address</th>
+        <th scope="col">Username</th>
+        <th scope="col">Password</th>
+      </tr>
+    </thead>
+    
+    <tbody *ngFor = "let admin of admins">
+        
+      <tr>
+        <th scope="row">{{admin.cmp_name}}</th>
+        <td>{{admin.id}}</td>
+        <td>{{admin.name}}</td>
+        <td>{{admin.email}}</td>
+        <td>{{admin.mobile}}</td>
+        <td>{{admin.gender}}</td>
+        <td>{{admin.address}}</td>
+        <td>{{admin.username}}</td>
+        <td>{{admin.password}}</td>
+         <a [routerLink]="['/editadmin',admin.id]" routerLinkActive="active" >
+          <input type="button"  value="Edit" class="btn btn-success">
+        </a>
+        <input type="button" (click) = "deleteAdmin(admin.id)" value="Delete" class="btn btn-danger">
+      </tr>    
+    </tbody>
+  </table>
+</body>
